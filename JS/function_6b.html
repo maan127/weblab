@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let stringg=(prompt("ENTER THE STRING"))
+        let substr=prompt("ENTER THE SUBSTRING")
+        let position=parseInt(prompt("Enter the position at which you want to insert substring"))
+        function insert(str, index, value) {
+            return str.substr(0, index) + value + str.substr(index);
+        }
+        document.write(`THE RESULTING STRING IS : ${ insert (stringg,position,substr)}`)
+    </script>
+</body>
+</html>
