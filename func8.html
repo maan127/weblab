@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let pt=prompt("enter the plain script");
+        let key=parseInt(prompt("enter the key"));
+    function isUpperCase(str) {
+        return str === str.toUpperCase();
+    }
+    let ceaserCipher = (str, key) => {
+      let decipher = '';
+      for(let i = 0; i < str.length; i++){
+        if(isUpperCase(str[i])){
+          decipher += String.fromCharCode((str.charCodeAt(i) + key - 65) % 26 + 65);
+        }else{
+          decipher += String.fromCharCode((str.charCodeAt(i) + key - 97) % 26 + 97);
+        }
+      }
+      
+      
+      return decipher;
+    }
+    document.write(ceaserCipher(pt,key))
+        </script>
+</body>
+</html>
